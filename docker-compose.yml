@@ -1,0 +1,21 @@
+version: '3'
+services:
+
+  mysql:
+    image: mysql:8.1
+    environment:
+      MYSQL_USER: gabriel360
+      MYSQL_PASSWORD: gabriel360
+      MYSQL_DATABASE: java_aulas
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8081
