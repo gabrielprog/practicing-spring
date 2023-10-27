@@ -1,0 +1,8 @@
+POST http://127.0.0.1:8080/api/produtos HTTP/1.0
+Content-type: application/json
+
+{
+    "name": "Lg tv",
+    "price": 10000.00,
+    "discount": 10
+}
