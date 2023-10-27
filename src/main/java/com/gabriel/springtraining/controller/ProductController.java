@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -36,6 +37,11 @@ public class ProductController {
     @GetMapping("/{id}")
     public Optional<Product> readById(@PathVariable Long id) {
         return productRepo.findById(id);
+    }
+
+    @PutMapping
+    public @ResponseBody Product update(@RequestBody @Valid Product product) {
+        return productRepo.save(product);
     }
 
 }
