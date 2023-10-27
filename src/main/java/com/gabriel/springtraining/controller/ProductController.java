@@ -21,13 +21,13 @@ public class ProductController {
     private ProductRepo productRepo;
 
     @PostMapping
-    public @ResponseBody Product create(@Valid Product product) {
+    public @ResponseBody Product create(@RequestBody @Valid Product product) {
         return productRepo.save(product);
     }
 
-    // @GetMapping
-    // public void readAll() {
-    //     return productRepo.findAll();
-    // }
+    @GetMapping
+    public Iterable<Product> readAll() {
+        return productRepo.findAll();
+    }
 
 }
