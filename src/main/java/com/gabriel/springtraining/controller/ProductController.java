@@ -24,4 +24,10 @@ public class ProductController {
     public @ResponseBody Product create(@Valid Product product) {
         return productRepo.save(product);
     }
+
+    // @GetMapping
+    // public void readAll() {
+    //     return productRepo.findAll();
+    // }
+
 }
