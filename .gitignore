@@ -34,3 +34,7 @@ build/
 
 ### VOLUMES DOCKER ###
 mysql_data
+
+
+### HTTP REQUEST ###
+*.http
