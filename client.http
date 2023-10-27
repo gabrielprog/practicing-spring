@@ -6,3 +6,19 @@ Content-type: application/json
     "price": 10000.00,
     "discount": 10
 }
+
+###
+
+PUT http://127.0.0.1:8080/api/produtos HTTP/1.0
+Content-type: application/json
+
+{
+    "id": 1,
+    "name": "Lg tv",
+    "price": 500,
+    "discount": 10
+}
+
+###
+
+DELETE http://127.0.0.1:8080/api/produtos/1 HTTP/1.0
